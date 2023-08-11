@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 16px;
+    gap: 16px;
+
+
+}
+.item{
+    height: 150px;
+    width: 80%;
+    background-color: lightcoral;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 32px;
+}
+.texto{
+    color: pink;
+    font-size: 64px;
+}
+.forma{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(131, 3, 178);
+    cursor: pointer;
+    transition: 1s;
+}
+
+.vermelho{
+    background-color: red;
+}
+.circulo{
+    border-radius: 50%;
+}
+.imagem{
+    background-image: url(./image/flor.jpg);
+    background-size: cover;
+}
+.fundo{
+opacity: 0;
+}
+.rodar{
+    transform: rotate(-500deg);
+    
+}
+.movimentar{
+    position: absolute;
+    animation: movimentar 2s infinite;
+}
+
+@keyframes movimentar {
+    from{
+        right: 10%;
+        width: 50%;
+    }
+    to{
+        right: 40%;
+    }
+}
+.pulsando{
+    animation: pulsando 1s ease-in-out infinite; 
+}
+
+@keyframes pulsando {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); 
+    }
+}
+.aumentar{
+    width: 150px;
+    height: 150px;
+}
